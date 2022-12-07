@@ -96,13 +96,48 @@ function validarCampos() {
 /* ESSA FUNÇÃO CADASTRA OS NOMES DOS INPUTS NO JSON, COM A VELOCIDADE */
 function corrida() {
     numeroVoltas++
+
+    // zerando velocidades
+    var velocidadeUm = (Number(0))
+    var velocidadeDois = (Number(0))
+    var velocidadeTres = (Number(0))
+    var velocidadeQuatro = (Number(0))
+    var velocidadeCinco = (Number(0))
+    var velocidadeSeis = (Number(0))
+    var velocidadeSete = (Number(0))
+
+
     if (numeroVoltas <= comboDois.value) {
         cardCorrida.innerHTML += `VOLTA ${numeroVoltas}:<br>`
         
         /* INSERINDO VALOR NO JSON */
         for (let i = 0; i < qtdCavalos; i++) {
+
             cavalosVelocidades.cavalo.push(nomes[i])
-            cavalosVelocidades.velocidade.push((Math.random() * 2 + 7))
+
+            // adicionando mathRandom
+            velocidadeUm = (Math.random() * 2 + 7)
+            velocidadeDois = (Math.random() * 2 + 7)
+            velocidadeTres = (Math.random() * 2 + 7)
+            velocidadeQuatro = (Math.random() * 2 + 7)
+            velocidadeCinco = (Math.random() * 2 + 7)
+            velocidadeSeis = (Math.random() * 2 + 7)
+            velocidadeSete = (Math.random() * 2 + 7)
+
+            console.log(velocidadeTres)
+            console.log(velocidadeDois)
+            console.log(velocidadeUm)
+
+            // cavalosVelocidades.velocidade.push((Math.random() * 2 + 7))
+
+            // cada clique vai adicionar uma velocidade
+             cavalosVelocidades.velocidade[0] = (velocidadeUm)
+             cavalosVelocidades.velocidade[1] = (velocidadeDois)
+             cavalosVelocidades.velocidade[2] = (velocidadeTres)
+             cavalosVelocidades.velocidade[3] = (velocidadeQuatro)
+             cavalosVelocidades.velocidade[4] = (velocidadeCinco)
+             cavalosVelocidades.velocidade[5] = (velocidadeSeis)
+             cavalosVelocidades.velocidade[6] = (velocidadeSete)
         }
 
         /* MOSTRANDO OS VALORES DO JSON, 
@@ -117,10 +152,12 @@ function corrida() {
             }
             
         }
+
         
     } else {
+        cardCorrida.innerHTML = `Todas as voltas já foram dadas.`
         /* FAZER ALGO PARA SUBSTITUIR O ALERT DEPOIS */
-        alert('Todas as voltas já foram dadas')
+        // alert('Todas as voltas já foram dadas')
     }
 }
 
