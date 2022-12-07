@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TURFE</title>
+    <link rel="stylesheet" href="turfe.css">
+    <script type="text/javascript" src="turfe.js"></script>
+    <link rel="icon" type="image/png" href="./imagens-cavalos/cavalo-7.png"/>
+</head>
+
+<body>
+    <div class="l-site">
+        <div id="container" class="container">
+            <div class="entrada" id="entrada">
+                <img src="/imagens-cavalos/TURFE.png">
+                <div class="mostrarCavalosSELECT">
+                    <p>Quantos cavalos vão correr?</p>
+                    <select id="comboUm">
+                        <option selected disabled value="0">--Selecione--</option>
+                        <!-- <option value="1">Um cavalo</option> -->
+                        <option value="2">Dois cavalos</option>
+                        <option value="3">Tres cavalos</option>
+                        <option value="4">Quatro cavalos</option>
+                        <option value="5">Cinco cavalos</option>
+                        <option value="6">Seis cavalos</option>
+                        <option value="7">Sete cavalos</option>
+                    </select>
+                </div>
+                <div class="mostrarCavalosBOTAO">
+                    <button onclick="mostrarCavalos()">Ir para cavalos</button>
+                </div>
+            </div>
+        </div>
+        <div class="containerCards" id="containerCards">
+            <!-- INNER DO FOR VAI AQUI -->
+        </div>
+        <div class="containerCorrida" id="containerCorrida">
+            <div class="cardCorrida" id="cardCorrida">
+            <!-- RESULTADO DAS VOLTAS AQUI -->
+            </div>
+        </div>
+        <div class="containerCadastro" id="containerCadastro">
+            <!-- INNER DO FOR VAI AQUI -->
+        </div>
+        <div class="containerVoltas" id="containerVoltas">
+            <!-- INNER VAI AQUI -->
+            <button onclick="corrida()">OUTRA VOLTA</button>
+        </div>
+    </div>
+</body>
